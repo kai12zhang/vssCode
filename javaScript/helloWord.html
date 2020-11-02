@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<Head>
+    <!--内嵌式的js-->
+    <script>
+        // alert('内嵌式的js');
+        // 单行注释 ctrl + /
+        /*  多行注释  默认shift + alt + a
+            多行注释  编辑后ctrl + shift + /
+        */
+        // prompt('请输入：')
+        // alert('输出')
+        // console.log('test0001')
+    </script>
+    <!--外部调用的js-->
+    <!-- <script src="my01.js"></script> -->
+
+    <script>
+        var age;
+        age = 18;
+        var myname = 'zzzz';
+        console.log(age);
+        console.log(myname);
+        // 沒有定義
+        tel = 1234567;
+        console.log(tel);
+        var num = 10;
+
+        var x = 10;    //數字類型
+        x = 'test01';   //字符串型
+    </script>
+
+    <script>
+        // isNaN() 判斷是不是數字類型
+        // var aaa = 123   
+        // var bbb = 'test'
+        // console.log(isNaN(aaa));  //false
+        // console.log(isNaN(bbb));  //true
+    </script>
+
+    <script>
+        if (false) {
+            console.log(true);
+        } else {
+            console.log(false);
+        }
+    </script>
+
+    <script>
+        for(var i = 1; i <=5; i++){
+            if(i == 3){
+                continue;
+            }
+            console.log(i);
+        }
+    </script>
+
+    <script>
+        //創建數組
+        var arr = new Array(); 
+        var arr1 = [];
+        var arr2 = ['aa','bb','cc'];
+    </script>
+
+    <script>
+        function test01(aru){
+            console.log(aru);
+        }
+        test01('test000002');
+    </script>
+
+    <script>
+        // 作用域 1，全局作用域  2，局部作用域（函數作用域）
+        var num = 10;   //1，全局作用域 
+        function fn(){
+            var num = 20;    //2，局部作用域（函數作用域）
+        }
+    </script>
+
+    <script>
+        // 作用域鏈
+        function f1(){
+            var num = 123;
+
+            function f2(){
+                console.log(num);
+            }
+            f2();
+        }
+        var num = 456;
+        f1();
+    </script>
+
+    <script>
+        fn1();
+        function fn1(){
+            console.log('預編譯22');
+        }
+    </script>
+
+    <script>
+        // 函數表達式（匿名函數）
+        var fn1 = function(aru){
+            console.log(aru);
+        }
+        fn1('函數表達式');
+    </script>
+
+    <script>
+        // var obj = {}; // 创建了一个空的对象
+        // 1.利用对象自变量创建对象{}
+        var obj = {
+                name : 'zhangsan',
+                age : 18,
+                sex : '男',
+                sing : function(){
+                    console.log('学习');
+                }
+            }
+        console.log(obj.name);
+        // console.log(boj['name']);
+        // console.log(obj.sing());
+        obj.sing();
+    </script>
+
+    <script>
+        //2. 使用new来创建对象
+        var obj = new Object();  //创建了一个空的对象
+        obj.name = 'test01';
+        obj.age = 19;
+        obj.say = function(){
+            console.log('唱歌');
+        }
+        console.log(obj.name);
+        obj.say();
+    </script>
+
+    <script>
+        //3.  使用构造方法来创建对象
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+            this.sing = function(){
+                console.log(name + '今年：' + age + '岁')
+            }
+        }
+        var aa1 = new Person('lisi' ,35);
+        aa1.sing();
+    </script>
+
+    <script>
+        //遍历类属性
+        var obj = {
+            name : 'zhangsan',
+            age : 18,
+            sex : '男',
+            sing : function(){
+                console.log('学习');
+            }
+        }
+
+        for(var k in obj){
+            // console.log(k);
+            console.log('----------');
+            console.log(obj[k]);
+        }
+    </script>
+
+    <script>
+        var date1 =  new Date();
+        console.log(date1);
+    </script>
+
+    <script>
+        function conutDown(time){
+            var nowTime = +new Date();
+            var inoutTime = +new Date(time);
+            var times = (inoutTime - nowTime) / 1000;
+            var d = parseInt(times / 60 / 60 / 24);
+            var h = parseInt(times / 60 / 60 % 24);
+            var m = parseInt(times / 60 % 60);
+            var s = parseInt(times % 60);
+            return d + '天' + h + '时' + m + '分' + s + '秒'
+        }
+
+        console.log(conutDown('2020-11-1 19:00:00'));
+    </script>
+
+</Head>
+
+<body>
+    <!--行内式js 直接写到元素的内容-->
+    <!-- <input type="button" value="click" onclick="alert('行内式的js')"></input> -->
+</body>
+
+</html>
