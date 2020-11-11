@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位-子绝父相</title>
+    <style>
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .t01 {
+            width: 1000px;
+            margin: auto;
+            background-color: silver;
+            margin-top: 100px;
+        }
+
+        .t01>div {
+            position: relative;
+            float: left;
+            width: 300px;
+            height: 300px;
+            margin-left: 10px;
+            margin-top: 5px;
+            background-color: skyblue;
+        }
+
+        .t01>div>div {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 30px;
+            background-color: red;
+        }
+
+        .t01 .guding {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            left: 50%;
+            top: 300px;
+            background-color: sandybrown;
+            margin-left: 400px;
+        }
+
+        .t01 .head {
+            position: sticky;
+            top: 10px;
+            z-index: 1;
+            width: 920px;
+            height: 50px;
+            background-color: seagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="t01 clearfix">
+        <div class="head">我是导航栏</div>
+        <div>1
+            <div>new</div>
+        </div>
+        <div>2
+            <div>new</div>
+        </div>
+        <div>3
+            <div>new</div>
+        </div>
+        <div>4
+            <div>new</div>
+        </div>
+        <div>5
+            <div>new</div>
+        </div>
+        <div>6
+            <div>new</div>
+        </div>
+        <div>7
+            <div>new</div>
+        </div>
+        <div>7
+            <div>new</div>
+        </div>
+        <div>7
+            <div>new</div>
+        </div>
+        <div>7
+            <div>new</div>
+        </div>
+        <div>7
+            <div>new</div>
+        </div>
+        <div>7
+            <div>new</div>
+        </div>
+        <div>7
+            <div>new</div>
+        </div>
+        <div class="guding">我是固定窗口</div>
+    </div>
+
+
+</body>
+
+</html>

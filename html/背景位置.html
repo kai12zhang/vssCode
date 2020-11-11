@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景图片位置</title>
+    <style>
+        .c01 {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            background-image: url(./images/images.png);
+            /* background-position: center center; */
+            background-position: 50px 30px; 
+            background-repeat: no-repeat;
+        }
+        .c02 {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            display: inline-block;
+        }
+        .c03 {
+            width: 100px;
+            height: 100px;
+            background-color: seagreen;
+            display: inline-block;
+        }
+        .c04 {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="c01"></div>
+    <div class="c04">
+        <div class="c02"></div>
+        <div class="c03"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test01</title>
+</head>
+<body>
+    <h1>标题</h1>
+    <p>段落</p>
+    <br/> <!--换行标签-->
+    <p><strong>我是加粗的标签</strong></p>
+    <p><b>我也是加粗的标签</b></p>
+    <p><em>我是倾斜效果</em></p>
+    <p><i>我也是倾斜标签</i></p>
+    <p><del>我是删除文字</del></p>
+    <p><s>我也是删除文字</s></p>
+    <p><ins>我是下划线文字</ins></p>
+    <p><u>我也是下划线文字</u></p>
+
+    <div>我是一个div标签我一个人单独占一行（我是一个大盒子，里面可以装其他标签）</div>123
+    <span>我是一个span标签一行可以有多个盒子（我是一个大盒子，里面可以装其他标签）</span>123
+    <span>我是span标签</span>
+
+    <img src=""/> <!--图片标签-->
+    <br/><img src="" alt="找不到图片"/> <!--替换文本 图片显示不出来的时候用文字替换-->
+    <br/><img src="./images/images.png" alt="找不到图片" title="我是图片提示文字，鼠标放在上面显示"/> 
+    <br/><img src="" width="500"> <!--宽度-->
+    <br/><img src="" height="500"> <!--高度-->
+
+    <!--_blank 新窗口打开  内部链接-->
+    <a href="http://www.google.co.jp" target="_blank">外部超链接页面</a>
+
+    <!--内部链接-->
+    <br/><a href="test02.html" target="_blank">内部超链接页面</a>
+
+    <br/><a href="#" target="_blank">空超链接页面</a>
+
+    <!--地址链接的是 文件.exe或者.zip压缩包的形式，点击直接回下载-->
+    <br/><a href="*.zip"></a>
+    <br/><a href="http://www.google.co.jp"><img src="./images/images.png" /></a>
+
+    <!--锚点链接-->
+    <br/><a href="#one" id="back">跳往one目标标签</a>
+    <br/><a href="#two">跳往two目标标签</a>
+
+    <br/><h3 id="two">two</h3>
+    <br/><a href="#back"><h3 id="one">one</h3></a>
+    <!--空格-->
+    &nbsp;
+    <!--空格-->
+    &lt;
+    <!--空格-->
+    &gt;
+    <!--表格标签  cellpadding 文字和边框的距离， cellspacing 边框直接的距离 th 表头-->
+    <table align="center" border="1" cellpadding="3" cellspacing="0">
+        <tr>
+            <th>1</th>
+            <th>2</th>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <!--列表标签-->
+    <!--无序列表  ul内只能放li li内可以放置任何标签-->
+    <ul>
+        <li><h1>无序列表1</h1></li>
+        <li><h2>无序列表2</h2></li>
+        <li><h3>无序列表3</h3></li>
+    </ul>
+
+    <!--有序列表-->
+    <ol>
+        <li><h1>有序列表3</h1></li>
+        <li><h1>有序列表2</h1></li>
+        <li><h1>有序列表1</h1></li>
+    </ol>
+
+    <!--自定义列表 dl内只能写dd-->
+    <dl>
+        <dt>名字</dt>
+        <dd>name1</dd>
+        <dd>name2</dd>
+        <dd>name3</dd>
+    </dl>
+
+    <!--表单标签  收集用户信息 传递 -->
+    <form action="./test02.html" method="GET">
+        <!--input 标签-->
+        <label for="id03">文本框：</label><input type="text" name="text1"  name="name1" id="id03"><br/>
+        <!--label标签用于绑定一个表单元素，点击label就能选中标签的文本-->
+        <!--label中的for和元素的id 要一致-->
+        <label for="name1">密码框1：</label>
+        <input type="password"  id="name1"><br/>
+        <!--必须有相同的name名字才能实现单选的效果-->
+        <!--value 是传到后台使用的-->
+        单选框：<input type="radio" name="radio1" value="男">男<input type="radio" name="radio1" value="女">女<br/>
+        复选框：<input type="checkbox" value="check01" checked=ture>复选1<input type="checkbox" value="check01">复选2<br/>
+
+        <input type="submit" value="提交1"><br/>
+        <!--还原表单的初期状态-->
+        <input type="reset"><br/>
+        <!--结合js来使用的-->
+        <input type="button" value="button1"><br/>
+        <input type="file"><br/>
+        <select>
+            <option>aaa01</option>
+            <option>aaa02</option>
+            <option selected=true>aaa03</option>
+        </select><br/>
+        <textarea cols="50" rows="5">
+
+        </textarea>
+    </form>
+</body>
+</html>
